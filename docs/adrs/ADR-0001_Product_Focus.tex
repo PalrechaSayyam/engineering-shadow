@@ -1,0 +1,46 @@
+\section{ADR-0001: Product Focus}
+
+\subsection*{Status}
+
+Accepted
+
+\subsection*{Context}
+
+The initial vision considered building a general-purpose engineering memory platform capable of supporting multiple engineering disciplines.
+
+Early product discussions concluded that such a scope would be too broad for an initial implementation and would significantly increase the complexity of product validation.
+
+A narrower domain would enable better understanding of user workflows, more accurate validation, and faster iteration.
+
+\subsection*{Decision}
+
+The first version of Engineering Shadow shall exclusively target RTL Design Engineers and FPGA Design Engineers working on long-term digital hardware design projects.
+
+The product shall be designed around real RTL engineering workflows, with future expansion to other engineering domains considered only after successful validation.
+
+\subsection*{Rationale}
+
+Restricting the initial scope provides several advantages.
+
+\begin{itemize}
+    \item The engineering workflow is well understood through first-hand experience.
+    \item Product decisions can be validated against real engineering problems.
+    \item The system can be optimized for RTL-specific terminology, workflows, and constraints.
+    \item Product complexity is significantly reduced during early development.
+\end{itemize}
+
+\subsection*{Alternatives Considered}
+
+\begin{enumerate}
+    \item Generic engineering assistant.
+    \item AI assistant for all software and hardware engineers.
+    \item Research assistant independent of engineering domain.
+\end{enumerate}
+
+These alternatives were rejected because they dilute the product focus and make early validation significantly more difficult.
+
+\subsection*{Consequences}
+
+All subsequent product decisions shall prioritize the needs of RTL engineers.
+
+Future expansion beyond RTL engineering will be considered only after achieving a successful and validated product within the initial target domain.

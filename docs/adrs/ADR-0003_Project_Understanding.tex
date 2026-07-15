@@ -1,0 +1,43 @@
+\section{ADR-0003: Project Understanding as the Core Product Capability}
+
+\subsection*{Status}
+
+Accepted
+
+\subsection*{Context}
+
+General-purpose AI assistants provide responses based primarily on the information available within the current interaction.
+
+As engineering projects evolve, important context including project objectives, architectural evolution, engineering decisions, design constraints, previous experiments, verification results, and guide feedback becomes fragmented across multiple tools and conversations.
+
+Engineers are therefore required to repeatedly reconstruct project context before meaningful assistance can be provided.
+
+\subsection*{Decision}
+
+Engineering Shadow shall maintain a continuously evolving understanding of the engineering project.
+
+All assistant capabilities, including documentation generation, design explanation, research assistance, debugging support, implementation guidance, and engineering recommendations, shall operate on this shared project understanding.
+
+\subsection*{Rationale}
+
+The primary value of Engineering Shadow is context-aware engineering assistance rather than isolated question answering.
+
+Maintaining project understanding enables the system to provide recommendations that remain consistent with project objectives, design constraints, previous decisions, architectural evolution, and historical engineering reasoning.
+
+This shared understanding forms the foundation upon which all higher-level product capabilities are built.
+
+\subsection*{Alternatives Considered}
+
+\begin{enumerate}
+    \item Session-based conversational memory.
+    \item Prompt-based context supplied by the engineer.
+    \item Static documentation as the primary knowledge source.
+\end{enumerate}
+
+These alternatives require repeated manual effort and do not maintain a continuously evolving representation of project understanding.
+
+\subsection*{Consequences}
+
+Project Understanding becomes the central capability of Engineering Shadow.
+
+Future components including Engineering Memory, Decision Memory, Project State, reasoning modules, documentation generation, and engineering guidance shall operate on this shared understanding rather than isolated user interactions.

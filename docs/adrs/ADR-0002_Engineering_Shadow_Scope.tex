@@ -1,0 +1,43 @@
+\section{ADR-0002: Engineering Shadow Scope}
+
+\subsection*{Status}
+
+Accepted
+
+\subsection*{Context}
+
+Initial discussions focused primarily on supporting RTL implementation and debugging.
+
+Further analysis of the RTL engineering workflow revealed that the majority of engineering decisions are made before implementation begins.
+
+Important activities such as theory building, literature review, architecture exploration, requirement analysis, and design planning produce critical engineering knowledge that is not captured by existing tools.
+
+Restricting the product to implementation support would ignore a substantial portion of the engineering lifecycle.
+
+\subsection*{Decision}
+
+Engineering Shadow shall support the complete RTL engineering lifecycle.
+
+The system shall begin assisting from project assignment and continue throughout learning, research, architecture design, implementation, verification, optimization, integration, and project presentation.
+
+\subsection*{Rationale}
+
+Engineering context is created continuously throughout the project lifecycle rather than only during coding.
+
+Supporting the complete lifecycle enables the system to preserve engineering reasoning from the earliest stages of the project and maintain consistent project understanding as the design evolves.
+
+\subsection*{Alternatives Considered}
+
+\begin{enumerate}
+    \item RTL coding assistant only.
+    \item Verification assistant only.
+    \item Debugging assistant only.
+\end{enumerate}
+
+These alternatives were rejected because they fail to preserve the reasoning that exists before implementation and therefore cannot maintain complete project understanding.
+
+\subsection*{Consequences}
+
+Future product capabilities shall be evaluated across the entire RTL engineering lifecycle rather than only during implementation.
+
+The Engineering Shadow shall continuously update its understanding as the project evolves through each engineering stage.
