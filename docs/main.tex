@@ -1,22 +1,217 @@
-\documentclass[11pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% RTL Engineering Shadow
+% Product Discovery & Design Documentation
+%
+% Version : 0.1
+% Author  : Sayyam Palrecha
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \usepackage[a4paper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{titlesec}
 \usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{booktabs}
 \usepackage{longtable}
-\title{RTL Engineering Shadow\\Product Discovery Document}
-\author{Project Founders}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{float}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    pdftitle={RTL Engineering Shadow},
+    pdfauthor={Sayyam Palrecha},
+    pdfsubject={Product Discovery},
+    pdfkeywords={RTL, FPGA, AI, Engineering Shadow, Product Design}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setstretch{1.15}
+
+\titleformat{\section}
+{\Large\bfseries}
+{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\large\bfseries}
+{\thesubsection}{1em}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{
+\Huge RTL Engineering Shadow\\[0.3cm]
+\Large Product Discovery and Design Documentation
+}
+
+\author{
+Sayyam Palrecha
+}
+
 \date{\today}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \maketitle
+
+\vspace{0.5cm}
+
 \tableofcontents
+
 \newpage
 
-\input{sections/01_vision}
-\input{sections/02_problem_statement}
-\input{sections/03_user_persona}
-\input{sections/04_current_workflow}
-\input{sections/05_product_hypothesis}
-\input{sections/06_mvp}
-\input{sections/07_open_questions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Product Documents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%--------------------------------------------------
+% Product Manifesto
+%--------------------------------------------------
+
+\input{product/00_manifesto}
+
+%--------------------------------------------------
+% Vision
+%--------------------------------------------------
+
+\input{product/01_vision}
+
+%--------------------------------------------------
+% Problem Statement
+%--------------------------------------------------
+
+\input{product/02_problem_statement}
+
+%--------------------------------------------------
+% User Persona
+%--------------------------------------------------
+
+\input{product/03_user_persona}
+
+%--------------------------------------------------
+% Engineering Workflow Analysis
+%--------------------------------------------------
+
+\input{product/04_workflow_analysis}
+
+%--------------------------------------------------
+% Shadow Behavioral Specification
+%--------------------------------------------------
+
+\input{product/05_shadow_behavior_specification}
+
+%--------------------------------------------------
+% Problem Analysis
+%--------------------------------------------------
+
+\input{product/06_problem_analysis}
+
+%--------------------------------------------------
+% Existing Solutions
+%--------------------------------------------------
+
+\input{product/07_existing_solutions}
+
+%--------------------------------------------------
+% Product Hypothesis
+%--------------------------------------------------
+
+\input{product/08_product_hypothesis}
+
+%--------------------------------------------------
+% Design Principles
+%--------------------------------------------------
+
+\input{product/09_design_principles}
+
+%--------------------------------------------------
+% Scope
+%--------------------------------------------------
+
+\input{product/10_scope}
+
+%--------------------------------------------------
+% MVP
+%--------------------------------------------------
+
+\input{product/11_mvp}
+
+%--------------------------------------------------
+% Future Vision
+%--------------------------------------------------
+
+\input{product/12_future_vision}
+
+%--------------------------------------------------
+% Open Questions
+%--------------------------------------------------
+
+\input{product/13_open_questions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Future Sections
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Uncomment as the project evolves.
+
+% \newpage
+% \input{architecture/system_architecture}
+
+% \newpage
+% \input{architecture/agent_architecture}
+
+% \newpage
+% \input{architecture/data_model}
+
+% \newpage
+% \input{research/engineering_state_model}
+
+% \newpage
+% \input{research/project_understanding_model}
+
+% \newpage
+% \input{research/decision_model}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Uncomment once references are added.
+
+% \newpage
+% \bibliographystyle{ieeetr}
+% \bibliography{references}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
