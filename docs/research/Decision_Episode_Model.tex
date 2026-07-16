@@ -1,0 +1,168 @@
+\section{Decision Episode Model}
+
+\subsection{Purpose}
+
+A Decision Episode represents a significant engineering decision together with the context that produced it.
+
+Its purpose is to preserve engineering reasoning rather than merely recording the final decision.
+
+Unlike traditional documentation, a Decision Episode captures how a decision evolved, why it was made, what alternatives were considered, and what evidence supported the final outcome.
+
+\vspace{0.5cm}
+
+\subsection{Motivation}
+
+Engineering projects involve numerous design decisions throughout their lifecycle.
+
+Although source code, documentation, and version control preserve the final implementation, they rarely preserve the reasoning that produced it.
+
+Consequently, engineers frequently spend considerable effort reconstructing historical context during design reviews, debugging sessions, onboarding, or discussions with collaborators.
+
+The Decision Episode Model addresses this limitation by treating engineering decisions as first-class project artifacts.
+
+\vspace{0.5cm}
+
+\subsection{Definition}
+
+A Decision Episode is an interpreted representation of one or more related engineering activities that together describe a meaningful engineering decision.
+
+A Decision Episode is not created from a single event.
+
+Instead, it is constructed by correlating evidence collected throughout the engineering workflow.
+
+\vspace{0.5cm}
+
+\subsection{Decision Episode Lifecycle}
+
+A Decision Episode progresses through the following stages.
+
+\begin{enumerate}
+    \item Evidence Collection
+    \item Evidence Correlation
+    \item Candidate Decision Episode
+    \item Confidence Assessment
+    \item Engineer Clarification (when required)
+    \item Confirmed Decision Episode
+    \item Project Understanding Update
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\subsection{Evidence Sources}
+
+Evidence supporting a Decision Episode may originate from multiple sources.
+
+Typical sources include:
+
+\begin{itemize}
+    \item Engineer input
+    \item Source code evolution
+    \item Version control history
+    \item RTL architecture modifications
+    \item Testbench evolution
+    \item Simulation results
+    \item Synthesis reports
+    \item Guide feedback
+    \item Research papers
+    \item Engineering notes
+    \item Design documentation
+\end{itemize}
+
+The system is not required to utilize every available source.
+
+The objective is to accumulate sufficient evidence to construct a useful understanding of the engineering decision.
+
+\vspace{0.5cm}
+
+\subsection{Decision Episode Components}
+
+Each confirmed Decision Episode should maintain the following information.
+
+\begin{itemize}
+    \item Trigger
+    \item Engineering Problem
+    \item Project Context
+    \item Alternatives Considered
+    \item Selected Solution
+    \item Engineering Reasoning
+    \item Supporting Evidence
+    \item Expected Outcome
+    \item Actual Outcome (when available)
+    \item Remaining Open Questions
+\end{itemize}
+
+\vspace{0.5cm}
+
+\subsection{Confidence Assessment}
+
+Decision Episodes are created from interpreted evidence and therefore possess varying levels of confidence.
+
+The system shall estimate its confidence before accepting a candidate Decision Episode.
+
+Three confidence levels are defined.
+
+\begin{itemize}
+    \item High Confidence
+    \item Medium Confidence
+    \item Low Confidence
+\end{itemize}
+
+High-confidence episodes may be accepted automatically.
+
+Medium and low-confidence episodes should request clarification from the engineer before becoming part of the Project Understanding Model.
+
+\vspace{0.5cm}
+
+\subsection{Engineer Interaction}
+
+The objective of the Decision Episode Model is to minimize interruption while preserving engineering understanding.
+
+The engineer should not be required to manually document every decision.
+
+Instead, the Shadow should:
+
+\begin{enumerate}
+    \item Observe engineering activities.
+    \item Correlate available evidence.
+    \item Construct a candidate Decision Episode.
+    \item Request clarification only when necessary.
+    \item Update the Project Understanding Model.
+\end{enumerate}
+
+Consequently, engineer interaction should remain brief and focused on validating or correcting inferred understanding rather than writing documentation.
+
+\vspace{0.5cm}
+
+\subsection{Relationship with the Project Understanding Model}
+
+Decision Episodes do not exist independently.
+
+Every confirmed Decision Episode contributes to the continuously evolving Project Understanding Model.
+
+The Project Understanding Model represents the Shadow's current understanding of the project, while Decision Episodes explain how that understanding evolved over time.
+
+\vspace{0.5cm}
+
+\subsection{Design Principles}
+
+The Decision Episode Model follows the principles below.
+
+\begin{enumerate}
+    \item Preserve reasoning rather than only outcomes.
+    \item Correlate evidence from multiple sources.
+    \item Minimize engineer interruption.
+    \item Prefer deterministic interpretation whenever sufficient.
+    \item Utilize AI reasoning only when deterministic interpretation cannot provide sufficient understanding.
+    \item Maintain transparency regarding confidence and supporting evidence.
+    \item Continuously refine project understanding as new evidence becomes available.
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\subsection{Current Limitations}
+
+The Decision Episode Model does not attempt to reconstruct the complete cognitive state of the engineer.
+
+Instead, it aims to maintain a practical level of project understanding that provides meaningful engineering assistance while remaining feasible with current technologies.
+
+The objective is useful project understanding rather than perfect human-level reasoning.
